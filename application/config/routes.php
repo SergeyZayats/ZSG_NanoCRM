@@ -54,5 +54,11 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 */
-$route['default_controller'] = 'pages/view';
-$route['(:any)'] = 'pages/view/$1';
+
+$route['default_controller'] = 'auth/action';
+
+/* Below routes handle authorization request*/
+
+$route['login'] = 'auth/action/login';
+$route['registration'] = 'auth/action/registration';
+$route['forget'] = 'auth/action/forget';
